@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import datetime as dt
 import numpy as np
-import re
 import joblib
 
 from sklearn.ensemble import RandomForestRegressor

@@ -2,7 +2,6 @@ streamlit
 pandas
 datetime
 numpy
-re
 joblib
 seaborn
 matplotlib.pyplot
