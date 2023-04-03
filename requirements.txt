@@ -4,7 +4,7 @@ datetime
 numpy
 joblib
 seaborn
-matplotlib.pyplot
+pyplot
 
 
 RandomForestRegressor
