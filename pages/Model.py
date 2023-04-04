@@ -68,13 +68,13 @@ with modelTraining:
     
     year = sel_col.slider('Year', min_value=2015, max_value=2019, value=2015, step=1)
 
-    precipitation = sel_col.write_input('Precipitation', '')
+    precipitation = sel_col.text_input('Precipitation', '')
 
-    average = sel_col.write_input('Average Daily Temperature (°C)', '')
+    average = sel_col.text_input('Average Daily Temperature (°C)', '')
     
-    minimum = sel_col.write_input('Minimum Daily Temperature (°C)', '')
+    minimum = sel_col.text_input('Minimum Daily Temperature (°C)', '')
 
-    maximum = sel_col.write_input('Maximum Daily Temperature (°C)', '')
+    maximum = sel_col.text_input('Maximum Daily Temperature (°C)', '')
 
     submit = sel_col.button('Predict')
 
