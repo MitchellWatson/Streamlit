@@ -33,15 +33,16 @@ with header:
 
 with features:
     st.header(":blue[MDM] Pages📄")
-    st.subheader("Model🤖")
-    st.markdown("* Model development")
-    st.markdown("* Prediction entry")
-    st.markdown("* Model evaluation")
 
     st.subheader("EDA📊")
     st.markdown("* Exploratory data analysis")
     st.markdown("* Feature development")
     st.markdown("* Feature importance")
+
+    st.subheader("Model🤖")
+    st.markdown("* Model development")
+    st.markdown("* Prediction entry")
+    st.markdown("* Model evaluation")
 
     st.subheader("Resources📙")
     st.markdown("* Dataset link")

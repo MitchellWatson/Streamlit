@@ -30,21 +30,21 @@ y = snow_data[['snow_depth']]
 st.title("Model page")
 
 st.header("Model Development🛠️")
-st.text("The model being used to predict snow depth is a RandomForestRegressor.")
-st.text("RandomForestRegressor fits a number of classifying decision tees to various sub-samples.")
-st.text("Many continuous data prediction model were tested such sa LinearRegression, XGBoost and more.")
-st.text("RandomForestRegression proved to be the best using RMSE as performance metric.")
-st.text("This RandomForestRegression contains:")
+st.write("The model being used to predict snow depth is a RandomForestRegressor.")
+st.write("RandomForestRegressor fits a number of classifying decision tees to various sub-samples.")
+st.write("Many continuous data prediction model were tested such sa LinearRegression, XGBoost and more.")
+st.write("RandomForestRegression proved to be the best using RMSE as performance metric.")
+st.write("This RandomForestRegression contains:")
 st.markdown("* 1000 estimators")
 st.markdown("* Default tree depth")
 st.markdown("* Default max features")
 
 
 st.header("Model Evaluation📝")
-st.text("Using the nordics_weather.csv, we can evaluate the model's performance")
-st.text("The dataset uses recordings and data from numerous different locations among different nordic countries.")
-st.text("This makes it so that a recording in located Finland could be geographically closer to a recording in Sweden compared to a different recording from Finland.")
-st.text("Therefore, this causes some unfortunate performance costs to the model as seen below.")
+st.write("Using the nordics_weather.csv, we can evaluate the model's performance")
+st.write("The dataset uses recordings and data from numerous different locations among different nordic countries.")
+st.write("This makes it so that a recording in located Finland could be geographically closer to a recording in Sweden compared to a different recording from Finland.")
+st.write("Therefore, this causes some unfortunate performance costs to the model as seen below.")
 
 st.subheader("R2 Score")
 st.write(0.9552228488958796)
@@ -58,7 +58,7 @@ modelTraining = st.container()
 
 with modelTraining:
     st.header("Model predictions🧐")
-    st.text("Input your parameters to see how much snow depth the model will predict!")
+    st.write("Input your parameters to see how much snow depth the model will predict!")
 
     sel_col, disp_col = st.columns(2)
 
@@ -68,13 +68,13 @@ with modelTraining:
     
     year = sel_col.slider('Year', min_value=2015, max_value=2019, value=2015, step=1)
 
-    precipitation = sel_col.text_input('Precipitation', '')
+    precipitation = sel_col.write_input('Precipitation', '')
 
-    average = sel_col.text_input('Average Daily Temperature (°C)', '')
+    average = sel_col.write_input('Average Daily Temperature (°C)', '')
     
-    minimum = sel_col.text_input('Minimum Daily Temperature (°C)', '')
+    minimum = sel_col.write_input('Minimum Daily Temperature (°C)', '')
 
-    maximum = sel_col.text_input('Maximum Daily Temperature (°C)', '')
+    maximum = sel_col.write_input('Maximum Daily Temperature (°C)', '')
 
     submit = sel_col.button('Predict')
 
@@ -102,7 +102,7 @@ with modelTraining:
                 sel_col.subheader(":green[Successfully displaying prediction in the above right!]")    
 
             except:
-                sel_col.subheader(":red[Text inputs must be integer or float values]")    
+                sel_col.subheader(":red[write inputs must be integer or float values]")    
 
         else :
             sel_col.subheader(":red[Please input all parameters above]")    
