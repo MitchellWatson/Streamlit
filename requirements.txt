@@ -6,5 +6,4 @@ joblib
 seaborn
 matplotlib
 
-sklearn
 scikit-learn
